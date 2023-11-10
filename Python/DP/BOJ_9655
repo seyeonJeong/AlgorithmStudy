@@ -1,0 +1,12 @@
+num = int(input())
+
+if (num % 2 == 0):
+    print("CY")
+else:
+    print("SK")
+
+# 1일 때 : SK
+# 2일 때 : CY
+# 3일 때 : SK
+# ...
+# DP의 관점에서 3개를 예로 들면 DP[2] + 1 = DP[3] 가 성립. 즉 전 단계 반대 사람이 승리한다.
