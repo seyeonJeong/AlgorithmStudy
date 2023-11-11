@@ -1,0 +1,17 @@
+import sys
+input = sys.stdin.readline
+
+triangle_num = [1]
+answer = [0] * 1001
+for i in range(2,45):
+    triangle_num.append(triangle_num[-1]+i)
+
+for i in range(len(triangle_num)):
+    for j in range(len(triangle_num)):
+        for k in range(len(triangle_num)):
+            if (triangle_num[i] + triangle_num[j] + triangle_num[k]) <= 1000:
+                answer[triangle_num[i] + triangle_num[j] + triangle_num[k]] = 1
+
+num = int(input())
+for i in range(num):
+    print(answer[int(input())])
