@@ -1,0 +1,52 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+import java.util.Arrays;
+
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        List<Integer> heightNumber = new ArrayList<>();
+        List<Integer> exceptionNumber = new ArrayList<>();
+        List<Integer> answerNumber = new ArrayList<>();
+        
+        
+        for(int i = 0; i < 9; i++){
+            heightNumber.add(Integer.parseInt(br.readLine()));
+        }
+        
+        Collections.sort(heightNumber);
+        int sum = heightNumber.stream().mapToInt(Integer::intValue).sum();
+        
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9;j++){
+                if(i == j){
+                    continue;
+                }
+                else{
+                    if(sum - (heightNumber.get(i) + heightNumber.get(j)) == 100){
+                        exceptionNumber.add(heightNumber.get(i));
+                        exceptionNumber.add(heightNumber.get(j));
+                        break;
+                    }
+                }
+            }
+        }
+        
+        for(int i = 0; i<9; i++){
+            if(heightNumber.get(i) == exceptionNumber.get(0) || heightNumber.get(i) == exceptionNumber.get(1)){
+                continue;
+            }
+            else{
+                System.out.println(heightNumber.get(i));
+            }
+        }
+    }
+}
