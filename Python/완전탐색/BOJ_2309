@@ -1,0 +1,32 @@
+
+
+height_list = []
+exception_list = []
+answer = []
+
+
+
+for i in range(9):
+    height_list.append(int(input()))
+
+height_list.sort()
+
+sum = sum(height_list)
+
+for i in range(len(height_list)):
+    for j in range(len(height_list)):
+        if i == j:
+            continue
+        else:
+            if(sum - (height_list[i] + height_list[j]) == 100):
+                exception_list.append(height_list[i])
+                exception_list.append(height_list[j])
+                break
+
+for i in range(len(height_list)):
+    if((height_list[i] == exception_list[0]) or (height_list[i] == exception_list[1])):
+        continue
+    else:
+        print(height_list[i])
+    
+    
