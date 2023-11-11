@@ -15,6 +15,7 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|분해합|브론즈2|(https://www.acmicpc.net/problem/2231)|
+|2|일곱 난쟁이|브론즈1|(https://www.acmicpc.net/problem/2309)|
 
 ## DP
 
