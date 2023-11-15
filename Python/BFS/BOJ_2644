@@ -1,0 +1,37 @@
+from collections import deque
+
+
+num_people = int(input())
+
+graph = [[] for _ in range(num_people+1)]
+
+people1,people2 = map(int,input().split())
+
+m = int(input())
+for _ in range(m):
+    x , y = map(int,input().split())
+    
+    graph[x].append(y)
+    graph[y].append(x)
+
+
+res = [0] * (num_people+1)
+
+def bfs(v):
+    queue = deque()
+    visited = [v]
+    queue.append(v)
+    
+    while queue:
+        f = queue.pop()
+        for i in graph[f]:
+            if i not in visited:
+                visited.append(i)
+                queue.append(i)
+                res[i] = res[f] + 1
+bfs(people1)
+
+if(res[people2] > 0):
+    print(res[people2])
+else:
+    print(-1)
