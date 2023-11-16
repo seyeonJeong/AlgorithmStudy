@@ -1,0 +1,40 @@
+
+
+def number_baseball(guess_num,numbers,strike,ball):
+    st = 0
+    bal = 0
+    cp_numbers = numbers.copy()
+    for i in numbers:
+        for j in range(3):
+            if guess_num[j] == i[j]:
+                st += 1
+            elif i[j] in guess_num:
+                bal += 1
+        
+        
+        if st != int(strike) or bal != int(ball):
+            cp_numbers.remove(i)
+        
+        st = 0
+        bal = 0
+  
+    return cp_numbers
+
+N = int(input())
+
+numbers = []
+
+for i in range(1,10):
+    for j in range(1,10):
+        if i == j:
+            continue
+        for k in range(1,10):
+            if j == k or i == k:
+                continue
+            numbers.append(str(i * 100 + j * 10 + k))
+
+for _ in range(N):
+    guess,strike,ball = input().split()
+    numbers = number_baseball(guess,numbers,strike,ball)
+
+print(len(numbers))
