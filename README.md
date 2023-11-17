@@ -58,3 +58,11 @@
 |------|---|---|---|
 |1|지름길|실버1|(https://www.acmicpc.net/problem/1446)|
 |2|최단경로|골드4|(https://www.acmicpc.net/problem/1753)|
+
+## 스택/큐
+
+------------
+
+|ID|이름|난이도|링크|
+|------|---|---|---|
+|1|탑|골드5|(https://www.acmicpc.net/problem/2493)|
