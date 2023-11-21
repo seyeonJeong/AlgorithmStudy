@@ -1,0 +1,23 @@
+
+H,W = map(int,input().split())
+
+cloud_list = [[] for _ in range(H)]
+answer = [[-1 for _ in range(W)] for _ in range(H)]
+for i in range(H):
+    cloud_list[i].append(input())
+
+for i in range(H):
+    check_cloud = 0
+    for j in range(len(cloud_list[i][0])):
+        if cloud_list[i][0][j] == 'c':
+            # answer[i][j] = 0
+            print(0,end = " ")
+            check_cloud = 1
+        elif cloud_list[i][0][j] == '.':
+            if check_cloud > 0:
+                # answer[i][j] = check_cloud
+                print(check_cloud,end = " ")
+                check_cloud += 1
+            else:
+                print(-1, end = " ")
+    print("")
