@@ -49,6 +49,7 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|올림픽|실버5|(https://www.acmicpc.net/problem/8979)|
+|2|등수 구하기|실버5|(https://www.acmicpc.net/problem/1205)|
 
 ## 그래프
 
