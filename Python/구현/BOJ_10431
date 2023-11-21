@@ -1,0 +1,21 @@
+
+T = int(input())
+
+for t in range(T):
+    people = list(map(int,input().split()))
+
+    answer = []
+    count = 0
+    for i in range(1,len(people)):
+        if len(answer) == 0:
+            answer.append(people[i])
+        else:
+            for j in range(len(answer)):
+                if people[i] < answer[j]:
+                    count += len(answer[j:])
+                    answer.insert(j, people[i])
+                    break
+                if j == len(answer) - 1:
+                    answer.append(people[i])
+
+    print(str(t+1) + " " + str(count))
