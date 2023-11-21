@@ -1,0 +1,21 @@
+
+N,score,P = map(int,input().split())
+
+
+if N == 0:
+    print(1)
+else:
+    score_list = list(map(int,input().split()))
+    if N==P and score_list[-1] >= score:
+        print(-1)
+    else:
+        score_list.append(score)
+        score_list.sort(reverse = True)
+        
+        idx = score_list.index(score)
+        print(idx + 1)
+
+
+
+    
+    
