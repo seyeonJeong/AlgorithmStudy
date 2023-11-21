@@ -1,0 +1,19 @@
+N = int(input())
+
+weight_list = []
+answer_list = [0 for _ in range(N)]
+rank = 0
+for i in range(N):
+    weight_list.append(list(map(int, input().split())))
+
+for i in range(len(weight_list)):
+    for j in range(len(weight_list)):
+        if weight_list[i][0] < weight_list[j][0]:
+            if weight_list[i][1] < weight_list[j][1]:
+                rank += 1
+    answer_list[i] = rank + 1
+    rank = 0
+
+
+for i in answer_list:
+    print(i,end=" ")
