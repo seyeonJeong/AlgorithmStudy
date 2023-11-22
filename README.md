@@ -53,6 +53,7 @@
 |3|기상캐스터|실버5|(https://www.acmicpc.net/problem/10709)|
 |4|덩치|실버5|(https://www.acmicpc.net/problem/7568)|
 |5|줄세우기|실버5|(https://www.acmicpc.net/problem/10431)|
+|6|스위치켜고끄기|실버4|(https://www.acmicpc.net/problem/1244)|
 
 ## 그래프
 
