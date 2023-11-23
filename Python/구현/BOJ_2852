@@ -1,0 +1,61 @@
+
+N = int(input())
+goal_list = []
+
+for _ in range(N):
+    goal_list.append(list(input().split()))
+
+
+score = 0
+prev = [0,0] # 어느 팀이든 마지막으로 이기기 시작한 시간
+one_time = [0,0] # 1팀의 이긴 시간 합계
+two_time = [0,0] # 2팀의 이긴 시간 합계
+
+for i in range(len(goal_list)):
+    if goal_list[i][0] == '1':
+        score += 1 # 1팀은 양수로 득점을 구별
+        if score == 1: # 만약 1이면 1이 이기는 순간이다.
+            prev[0] = int(goal_list[i][1][0:2])
+            prev[1] = int(goal_list[i][1][3:5])
+        if score == 0: # 2팀이 이기고 있던 상태에서 무승부
+            two_time[0] += int(goal_list[i][1][0:2]) - prev[0]
+            two_time[1] += int(goal_list[i][1][3:5]) - prev[1]
+            if two_time[1] >= 60:
+                two_time[0] += 1
+                two_time[1] = two_time[1] - 60
+            elif two_time[1] < 0:
+                two_time[0] -= 1
+                two_time[1] = 60 + two_time[1]
+
+    if goal_list[i][0] == '2':
+        score -= 1 # 2팀은 음수로 득점을 구별
+        if score == -1: # 만약 -1이면 2가 이기는 순간
+            prev[0] = int(goal_list[i][1][0:2])
+            prev[1] = int(goal_list[i][1][3:5])
+        if score == 0: # 1팀이 이기고 있던 상태에서 무승부, 마지막으로 이기던 순간을 현재 시간에서 빼준다.
+            one_time[0] += int(goal_list[i][1][0:2]) - prev[0]
+            one_time[1] += int(goal_list[i][1][3:5]) - prev[1]
+            if one_time[1] >= 60: # 만약 초가 60분을 초과하면 1분을 추가 (몫과 나머지로 구하는 기존 시간을 구하는 방법이 있지만, 이 문제에서는 로직 상에서 2분을 넘길 수 없다.)
+                one_time[0] += 1
+                one_time[1] = one_time[1] - 60
+            elif one_time[1] < 0: # 만약 초가 0보다 작으면 1분을 제거
+                one_time[0] -= 1
+                one_time[1] = 60 + one_time[1]
+
+if score > 0: # 1팀이 이김
+    one_time[0] += 48-prev[0]
+    one_time[1] += 0-prev[1]
+    if one_time[1] < 0:
+        one_time[0] -= 1
+        one_time[1] = abs(60 + one_time[1])
+elif score < 0: # 2팀이 이김
+    two_time[0] += 48-prev[0]
+    two_time[1] += 0 - prev[1]
+    if two_time[1] < 0:
+        two_time[0] -= 1
+        two_time[1] = abs(60 + two_time[1])
+
+# 무승부라면, 그냥 각자 가지고 있던 이기고 있던 시간이 정답이 된다.
+
+print('%02d' %one_time[0] + ':' + '%02d' %one_time[1])
+print('%02d' %two_time[0] + ':' + '%02d' %two_time[1])
