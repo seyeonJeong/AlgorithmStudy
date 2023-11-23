@@ -54,6 +54,7 @@
 |4|덩치|실버5|(https://www.acmicpc.net/problem/7568)|
 |5|줄세우기|실버5|(https://www.acmicpc.net/problem/10431)|
 |6|스위치켜고끄기|실버4|(https://www.acmicpc.net/problem/1244)|
+|7|NBA 농구|실버3|(https://www.acmicpc.net/problem/2852)|
 
 ## 그래프
 
