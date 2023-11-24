@@ -1,0 +1,37 @@
+
+p,m = map(int,input().split())
+
+room = []
+for _ in range(p):
+    if len(room) == 0:
+        room.append([])
+    rank,name = input().split()
+    enter_flag = False
+    for i in range(len(room)):
+        if len(room[i]) == 0: # 만약 i번째 방이 비어있다면? 입장한다.
+            room[i].append([rank,name])
+            enter_flag = True
+            break
+        else: # 랭킹에 맞으면 통과
+            if (int(room[i][0][0]) + 10) >= int(rank) and (int(room[i][0][0]) - 10) <= int(rank):
+                if len(room[i]) < m: # 방길이가 m미만 일때 입장 , ex) 인원 제한이 5일 경우에 4인 경우만 입장이 가능하다.
+                    room[i].append([rank,name])
+                    enter_flag = True
+                    break
+
+    if enter_flag == False: # 만약 아무 방에도 입장하지 못하면 새로 방을 만든다.
+        room.append([[rank,name]])
+
+
+
+for i in range(len(room)):
+    room[i].sort(key=lambda x: x[1])
+    if len(room[i]) == m:
+        print('Started!')
+    else:
+        print('Waiting!')
+    for j in range(len(room[i])):
+        print(room[i][j][0] + " " + room[i][j][1])
+
+
+
