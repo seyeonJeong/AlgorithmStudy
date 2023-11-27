@@ -56,6 +56,7 @@
 |6|스위치켜고끄기|실버4|(https://www.acmicpc.net/problem/1244)|
 |7|NBA 농구|실버3|(https://www.acmicpc.net/problem/2852)|
 |8|랭킹전 대기열|실버1|(https://www.acmicpc.net/problem/20006)|
+|9|한 줄로 서기|실버2|(https://www.acmicpc.net/problem/1138)|
 
 ## 그래프
 
