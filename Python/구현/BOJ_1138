@@ -1,0 +1,29 @@
+
+N = int(input())
+
+line = []
+
+people = list(map(int,input().split()))
+insert_flag = False
+
+for i in range(len(people)-1,-1,-1):
+   if len(line) == 0:
+       line.append(i+1)
+   else:
+       cnt = 0
+       insert_flag = False
+       for j in range(len(line)):
+           if cnt == people[i]:
+               line.insert(j,i+1)
+               insert_flag = True
+               break
+           if line[j] > i+1:
+              cnt += 1
+
+       if insert_flag == False:
+           line.append(i+1)
+
+for k in line:
+    print(k,end=" ")
+
+
