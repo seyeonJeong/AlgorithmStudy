@@ -1,0 +1,25 @@
+
+
+N = int(input())
+alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","n","m","o","p","q","r","s","t","u","v","w","x","y","z"]
+num_list = []
+for _ in range(N):
+    text = input()
+    number = ""
+    for i in range(len(text)):
+        if text[i] not in alpha: # 단어가 알파벳이 아니면 number에 추가
+            number += text[i]
+        else:
+            if number != "": # 만약 number가 있다면
+                num_list.append(int(number)) # num_list에 추가
+                number = "" # number 초기화
+    if number != "": # 마지막에 숫자가 나온경우 안들어가지므로 추가로 검사
+        num_list.append(int(number))
+
+num_list.sort() # 오름차순
+
+for i in num_list:
+    print(i)
+
+
+
