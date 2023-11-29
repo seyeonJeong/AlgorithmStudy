@@ -17,6 +17,7 @@
 |1|분해합|브론즈2|(https://www.acmicpc.net/problem/2231)|
 |2|일곱 난쟁이|브론즈1|(https://www.acmicpc.net/problem/2309)|
 |3|유레카 이론|브론즈1|(https://www.acmicpc.net/problem/10448)|
+|4|영화감독 숌|실버5|(https://www.acmicpc.net/problem/1436)|
 
 ## DP
 
