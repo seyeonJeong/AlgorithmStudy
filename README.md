@@ -27,7 +27,7 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|돌 게임|실버5|(https://www.acmicpc.net/problem/9655)|
-
+|2|진우의 달 여행|실버4|(https://www.acmicpc.net/problem/17484)|
 ## BFS
 
 ------------
@@ -35,6 +35,7 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|촌수계산|실버2|(https://www.acmicpc.net/problem/2644)|
+
 
 ## DFS
 
