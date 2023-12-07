@@ -19,6 +19,7 @@
 |3|유레카 이론|브론즈1|(https://www.acmicpc.net/problem/10448)|
 |4|영화감독 숌|실버5|(https://www.acmicpc.net/problem/1436)|
 |5|체스판 다시 칠하기|실버4|(https://www.acmicpc.net/problem/1018)|
+|6|사탕게임|실버2|(https://www.acmicpc.net/problem/3085)|
 
 ## DP
 
