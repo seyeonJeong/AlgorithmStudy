@@ -1,0 +1,11 @@
+
+alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','n','m','o','p','q','r','s','t','u','v','w','x','y','z'] # 알파벳 배열
+
+text = input()
+answer = [0 for _ in range(len(alpha))] 
+for i in text:
+    for j in range(len(alpha)):
+        if i == alpha[j]:
+            answer[j] += 1 # 같으면 해당 인덱스에 +1을 해준다.
+
+print(answer)            
