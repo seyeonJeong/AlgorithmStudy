@@ -87,3 +87,4 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|수학숙제|실버4|(https://www.acmicpc.net/problem/2870)|
+|2|알파벳갯수|브론즈4|(https://www.acmicpc.net/problem/10808)|
