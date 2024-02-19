@@ -88,3 +88,4 @@
 |------|---|---|---|
 |1|수학숙제|실버4|(https://www.acmicpc.net/problem/2870)|
 |2|알파벳개수|브론즈4|(https://www.acmicpc.net/problem/10808)|
+|3|팰린드롬인지 확인하기|브론즈3|(https://www.acmicpc.net/problem/10988)|
