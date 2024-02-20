@@ -1,0 +1,27 @@
+import sys
+input = sys.stdin.readline
+
+N,M = map(int, input().rstrip().split())
+
+word_list = {}
+
+for _ in range(N):
+    word = input().rstrip()
+    
+    if len(word) < M:
+        continue
+    else:
+        if word in word_list:
+            word_list[word] += 1
+        else:
+            word_list[word] = 1
+
+word_list = sorted(word_list.items(), key = lambda x : (-x[1], -len(x[0]), x[0]))
+
+# word_list.itmes() : 튜플로 묶인 key와 value값이 나온다.
+# -x[1] : 개수를 내림차순으로
+# -len(x[0]) : 단어의 길이를 내림차순으로
+# x[0] : 단어를 사전순으로 정렬
+
+for i in word_list:
+    print(i[0])
