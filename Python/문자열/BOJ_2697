@@ -1,0 +1,26 @@
+import copy
+
+N = int(input())
+
+word_list = []
+
+for _ in range(N):
+    word_list.append(input())
+
+first_word = list(word_list[0])
+answer = 0
+
+for i in range(1,N):
+    s_word = list(word_list[i])
+    c_set1 = copy.deepcopy(first_word)
+    c_set2 = copy.deepcopy(s_word)
+    
+    for j in first_word:
+        if j in c_set2:
+            c_set1.remove(j)
+            c_set2.remove(j)
+    
+    if len(c_set2) <= 1 and len(c_set1) <= 1:
+        answer += 1
+                
+print(answer)
