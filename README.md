@@ -92,3 +92,4 @@
 |4|영단어 암기는 괴로워|실버3|(https://www.acmicpc.net/problem/20920)|
 |5|수 이어 쓰기|실버3|(https://www.acmicpc.net/problem/1515)|
 |6|비슷한 단어|실버2|(https://www.acmicpc.net/problem/2607)|
+|7|팰린드롬 만들기|실버3|(https://www.acmicpc.net/problem/1213)|
