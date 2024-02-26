@@ -1,0 +1,45 @@
+
+
+name = list(input())
+alpha = [0 for _ in range(26)]
+answer = ['' for _ in range(len(name))]
+#알파벳의 홀수 개수는 하나만 허용한다.
+for i in name:
+    alpha[ord(i)-ord('A')] += 1
+
+odd_num = 0
+odd_idx = 0
+
+# 알파벳의 개수가 홀수개인지 확인한 후 저장한다.
+for j in range(len(alpha)):
+    if alpha[j] % 2 != 0:
+        odd_num += 1
+        odd_idx = j 
+# 만약 홀수개의 수가 하나 이상이면 팰린드롬이 아니다. ex. AABBCD,AB,ABCCC
+if odd_num > 1:
+    print("I'm Sorry Hansoo")
+else:
+    # 만약 홀수 개의 수가 없다면, 정렬된 순서대로 배열의 맨앞, 맨뒤로 넣어준다.
+    if odd_num == 0:
+        name.sort()
+        i = 0
+        fix_len = len(name)
+        while name:
+            answer[i] = name[0]
+            answer[fix_len-1-i] = name[1]
+            name = name[2:]
+            i += 1
+    # 홀수개의 수가 있다면, 홀수개인 단어를 빼고 홀수개가 없을 경우와 같은 과정을 진행한다.
+    else:
+        answer[int(len(name) / 2)] = chr(ord('A') + odd_idx)
+        name.remove(chr(ord('A') + odd_idx))
+        name.sort()
+        i = 0
+        fix_len = len(name)
+        while name:
+            answer[i] = name[0]
+            answer[fix_len-i] = name[1]
+            name = name[2:]
+            i += 1
+    str = ''.join(answer)
+    print(str)
