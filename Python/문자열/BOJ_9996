@@ -1,0 +1,37 @@
+import copy
+
+N = int(input())
+pattern = list(input())
+n_pattern = []
+t_pattern = ""
+
+# pattern에서 *을 제외하고 나누어준다. *은 무조건 하나라고 문제에 정의되어 있으므로, 두개로 나누어진다.
+for i in range(len(pattern)):
+    if pattern[i] == "*":
+        n_pattern.append(t_pattern)
+        t_pattern = ""
+    else:
+        t_pattern += pattern[i]
+if t_pattern != "":
+    n_pattern.append(t_pattern)
+
+
+for _ in range(N):
+    text = input()
+    cnt = 0
+    
+    # 패턴의 처음은 무조건 첫번째에 나와야한다. ex. ab* abc 일 경우 hababc는 안된다. abhabc는 가능
+    if text[0:len(n_pattern[0])] == n_pattern[0]:
+        cnt += 1
+        text = text[len(n_pattern[0]):] # 슬라이싱을 하는 이유는 ab*ba aba 같은 경우 내 알고리즘에서는 DA를 출력해서 슬라이싱을 해줌
+    
+    if text[len(text)-len(n_pattern[1]):] == n_pattern[1]: # 남은 text 중 마지막 n_pattern[1]의 길이 만큼이 같으면 맞음
+        cnt += 1
+        
+    if cnt == 2:
+        print("DA")
+    else:
+        print("NE")
+    
+
+            
