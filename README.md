@@ -94,3 +94,11 @@
 |6|비슷한 단어|실버2|(https://www.acmicpc.net/problem/2607)|
 |7|팰린드롬 만들기|실버3|(https://www.acmicpc.net/problem/1213)|
 |8|한국이 그리울 땐 서버에 접속하지|실버3|(https://www.acmicpc.net/problem/9996)|
+
+## 문자열
+
+------------
+
+|ID|이름|난이도|링크|
+|------|---|---|---|
+|1|약수 구하기|브론즈3|(https://www.acmicpc.net/problem/2501)|
