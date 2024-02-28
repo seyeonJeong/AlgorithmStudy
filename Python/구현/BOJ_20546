@@ -1,0 +1,62 @@
+# BOJ_20546
+
+# 준현의 매매법 알고리즘
+# 그냥 돈 되면 다 산다.
+def junhyen(money,stock):
+    buy_stock = 0
+    for i in stock:
+        if money >= i:
+            buy_stock += money // i
+            money -= (money // i) * i
+
+    return int(i * buy_stock + money)
+
+# 성민의 매매법 알고리즘
+# 만약 3번 연속 오르면 전량 매도, 3번 연속 하락하면 전량 매수
+# 값이 전날과 같다면 up, down 둘 다 아니므로 0으로 초기화
+# 3회 이상의 상승일 때는 상관없지만 (어차피 전량 매도여서 팔게 없다.)
+# 3회 이상의 하락일 때는 체크해야한다. (전량 매수 한날 보다 현저히 떨어지면 또 살 수 있음)
+def sungmin(money, stock):
+    buy_stock = 0
+    up = 0
+    down = 0
+    c_stock = stock[0]
+    for i in stock:
+        if c_stock < i:
+            up += 1
+            down = 0
+        elif c_stock > i:
+            down += 1
+            up = 0
+        else:
+            up = 0
+            down = 0
+            pass
+
+        if up >= 3:
+            money += buy_stock * i
+            buy_stock = 0
+        elif down >= 3:
+            if money > i:
+                buy_stock += money // i
+                money -= (money // i) * i
+        else:
+            pass
+        c_stock = i
+
+    return int(i * buy_stock + money)
+            
+                
+            
+money = int(input())
+stock = list(map(int,input().split()))
+
+final_jun = junhyen(money,stock)
+final_sun = sungmin(money,stock)
+
+if final_jun > final_sun:
+    print("BNP")
+elif final_jun < final_sun:
+    print("TIMING")
+else:
+    print("SAMESAME")
