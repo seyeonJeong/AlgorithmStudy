@@ -103,3 +103,4 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|약수 구하기|브론즈3|(https://www.acmicpc.net/problem/2501)|
+|2|에라토스테네스의 체|실버4|(https://www.acmicpc.net/problem/2960)|
