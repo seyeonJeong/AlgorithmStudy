@@ -1,0 +1,30 @@
+# BOJ_2960
+import copy
+
+N,K = map(int, input().split())
+num = []
+
+for i in range(2,N+1):
+    num.append(i)
+
+# erase = 지운 횟수
+# num 배열을 copy해준다.
+erase = 0
+c_num = copy.deepcopy(num)
+
+# erase가 k와 같아지면 멈춘다.
+while erase != K:
+    # num에 c_num을 복사한다. 이전 for문에서 지운 값을 갱신해 주는 것
+    temp = c_num[0]
+    num = copy.deepcopy(c_num)
+
+    for j in range(len(num)):
+        if num[j] % temp == 0:
+            answer = num[j]
+            c_num.remove(num[j])
+            erase += 1
+            if erase == K:
+                break
+    
+
+print(answer)
