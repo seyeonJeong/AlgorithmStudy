@@ -1,0 +1,21 @@
+# BOJ_2609
+
+n,k = map(int, input().split())
+
+# 최대 공약수
+# min(n,k) 보다 큰 공약수는 없음
+# min(n,k) 부터 -1 씩 내려가면서 찾음
+for i in range(min(n,k),0,-1):
+    if n % i == 0 and k % i == 0:
+        print(i)
+        break
+
+# 최소 공배수
+# max(a,b) 보다 작은 최소 공배수는 없다.
+# ex. 18,24 일 경우 24보다 작은 공배수는 존재하지 못함
+# n*k 보다 큰 최소공배수는 없다.
+for i in range(max(n,k), (n*k) + 1):
+    if i%n == 0 and i%k == 0:
+        print(i)
+        break
+    
