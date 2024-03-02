@@ -63,6 +63,7 @@
 |8|랭킹전 대기열|실버1|(https://www.acmicpc.net/problem/20006)|
 |9|한 줄로 서기|실버2|(https://www.acmicpc.net/problem/1138)|
 |10|🐜 기적의 매매법 🐜|실버5|(https://www.acmicpc.net/problem/20546)|
+|11|지능형 기차|브론즈3|(https://www.acmicpc.net/problem/2460)|
 
 ## 그래프
 
