@@ -105,4 +105,5 @@
 |------|---|---|---|
 |1|약수 구하기|브론즈3|(https://www.acmicpc.net/problem/2501)|
 |2|에라토스테네스의 체|실버4|(https://www.acmicpc.net/problem/2960)|
-|2|이진수|브론즈3|(https://www.acmicpc.net/problem/3460)|
+|3|이진수|브론즈3|(https://www.acmicpc.net/problem/3460)|
+|4|최대공약수와 최소공배수|브론즈1|(https://www.acmicpc.net/problem/2609)|
