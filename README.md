@@ -107,3 +107,12 @@
 |2|에라토스테네스의 체|실버4|(https://www.acmicpc.net/problem/2960)|
 |3|이진수|브론즈3|(https://www.acmicpc.net/problem/3460)|
 |4|최대공약수와 최소공배수|브론즈1|(https://www.acmicpc.net/problem/2609)|
+
+## 기타
+
+------------
+
+|ID|이름|난이도|링크|
+|------|---|---|---|
+|1|연산자 끼워넣기|실버1|(https://www.acmicpc.net/problem/14888)|
+
