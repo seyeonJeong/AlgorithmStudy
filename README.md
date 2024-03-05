@@ -116,4 +116,5 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|연산자 끼워넣기|실버1|(https://www.acmicpc.net/problem/14888)|
+|2|가르침|골드4|(https://www.acmicpc.net/problem/1062)|
 
