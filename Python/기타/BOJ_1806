@@ -1,0 +1,29 @@
+# 투포인터
+
+n,s = map(int,input().split())
+
+sequence = list(map(int,input().split()))
+
+start = 0
+end = 0
+sum = sequence[0]
+length = 100001
+
+while (start <= end):
+    if sum >= s:
+        length = min(length, len(sequence[start:end+1]))
+        sum -= sequence[start]
+        start += 1
+        
+    else:
+        if end != len(sequence) - 1:
+            end += 1
+            sum += sequence[end]
+        else:
+            sum -= sequence[start]
+            start += 1
+
+if length == 100001:
+    print(0)
+else:
+    print(length)
