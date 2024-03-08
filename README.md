@@ -120,4 +120,5 @@
 |1|연산자 끼워넣기|실버1|(https://www.acmicpc.net/problem/14888)|
 |2|가르침|골드4|(https://www.acmicpc.net/problem/1062)|
 |3|부분합|골드4|(https://www.acmicpc.net/problem/1806)|
+|3|부분 문자열|브론즈 2|(https://www.acmicpc.net/problem/16916)|
 
