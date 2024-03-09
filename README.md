@@ -110,6 +110,7 @@
 |2|에라토스테네스의 체|실버4|(https://www.acmicpc.net/problem/2960)|
 |3|이진수|브론즈3|(https://www.acmicpc.net/problem/3460)|
 |4|최대공약수와 최소공배수|브론즈1|(https://www.acmicpc.net/problem/2609)|
+|5|피보나치 수|브론즈2|(https://www.acmicpc.net/problem/2747)|
 
 ## 기타
 
