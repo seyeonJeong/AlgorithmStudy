@@ -84,6 +84,7 @@
 |ID|이름|난이도|링크|
 |------|---|---|---|
 |1|탑|골드5|(https://www.acmicpc.net/problem/2493)|
+|2|좋은 단어|실버4|(https://www.acmicpc.net/problem/3986)|
 
 ## 문자열
 
