@@ -1,0 +1,28 @@
+# BOJ_3986
+
+n = int(input())
+
+word = []
+
+for _ in range(n):
+    word.append(input())
+
+stack = []
+cnt = 0
+
+for i in word:
+    stack = []
+    for j in range(len(i)):
+        if stack:
+            if stack[-1] == i[j]:
+                stack.pop()
+            else:
+                stack.append(i[j])
+        else:
+            stack.append(i[j])
+    
+
+    if len(stack) < 1:
+        cnt += 1
+
+print(cnt)
