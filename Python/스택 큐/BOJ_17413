@@ -1,0 +1,35 @@
+
+word = input()
+
+stack = []
+answer = ''
+idx = 0
+while idx != len(word):
+    if word[idx] == ' ':
+        while stack:
+            answer += stack.pop()
+        answer += word[idx]
+        idx += 1
+        continue
+
+    if word[idx] == '<':
+        if stack:
+            while stack:
+                answer += stack.pop()
+        
+        while word[idx] != '>':
+            answer += word[idx]
+            idx += 1
+        
+        answer += word[idx]
+    
+    else:
+        stack.append(word[idx])
+
+    idx += 1
+        
+if stack:
+    while stack:
+        answer += stack.pop()
+ 
+print(answer)
