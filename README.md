@@ -86,6 +86,8 @@
 |1|탑|골드5|(https://www.acmicpc.net/problem/2493)|
 |2|좋은 단어|실버4|(https://www.acmicpc.net/problem/3986)|
 |3|오큰수|골드4|(https://www.acmicpc.net/problem/17298)|
+|4|단어 뒤집기2|실버3|(https://www.acmicpc.net/problem/17413)|
+
 
 
 ## 문자열
