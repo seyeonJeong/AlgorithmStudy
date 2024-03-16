@@ -128,3 +128,9 @@
 |3|부분합|골드4|(https://www.acmicpc.net/problem/1806)|
 |3|부분 문자열|브론즈 2|(https://www.acmicpc.net/problem/16916)|
 
+## Re-try
+
+------------
+
+|ID|이름|난이도|링크|
+|1|퇴사|실버3|(https://www.acmicpc.net/problem/14501)|
